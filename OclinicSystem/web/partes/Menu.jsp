@@ -39,7 +39,7 @@
 
                         </ul>
                     </li>
-                    <li><a href="partes/PRUEVAS.jsp#"onclick="$('.oferta').animatescroll({padding: 71})">Ofertas</a></li>
+                    <li><a href="partes/Ofertas.jsp#"onclick="$('.oferta').animatescroll({padding: 71})">Ofertas</a></li>
                     <li><a href="#" onclick="$('.contactos').animatescroll({padding: 71})">Contactenos</a></li>
                         <%--login--%>
                     <script>
