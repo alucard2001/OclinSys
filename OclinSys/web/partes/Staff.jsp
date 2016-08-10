@@ -1,10 +1,8 @@
 <%-- 
     Document   : Staff
-    Created on : 27-jul-2016, 20:00:20
+    Created on : 04-mar-2016, 7:15:21
     Author     : Alucard
 --%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!--staff-->
 <section class="staff">
     <div class="container">
@@ -12,41 +10,33 @@
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading">Staff de Profecionales</h2>
                 <p class="section-subheading text-muted" style="text-align: justify">
-                    Tenemos a su disposici贸n un equipo de profesionales en el 谩rea altamente calificados y 
-                    preparados para suplir cada una de sus necesidades odontol贸gicas con protocolos de servicio 
-                    que le har谩n sentir m谩s que complacidos, dentro de nuestro staff tenemos a los doctores/as:
+                   Tenemos a su disposici髇 un equipo de profesionales en el 醨ea altamente calificados y 
+                   preparados para suplir cada una de sus necesidades odontol骻icas con protocolos de servicio 
+                   que le har醤 sentir m醩 que complacidos, dentro de nuestro staff tenemos a los doctores/as:
                 </p>
             </div>
         </div>
         <div class="row text-center">
             <div class="col-md-4">
-                <h4 class="service-heading" style="text-align: justify">Dr.: Federico Rondon:</h4>
+                <h4 class="service-heading"style="text-align: justify">DRA.: SUSY BERNAL LUCAR:</h4>
                 <ul style="text-align: justify">
-                    <li>Cirujana Dental</li>
-                    <li>Rehabilitacion Integral</li>
-
+                    <li>CIRUJANA DENTAL</li>
+                    <li>REHABLITACION INTEGRAL</li>
+                    <li>ESTATICA</li>
+                    <li>ORTODONCIA</li>
                 </ul>
             </div>
 
         </div>
         <div class="row text-center">
             <div class="col-md-4">
-                <h4 class="service-heading" style="text-align: justify">Dra.: Susy Bernal:</h4>
+                <h4 class="service-heading"style="text-align: justify">DRA.: SUSY BERNAL LUCAR:</h4>
                 <ul style="text-align: justify">
-                    <li>Cirujano Maxilofacial</li>
-                    <li>Expecialista en Protesis e Implantes</li>
-                    <li>Ortodoncia</li>
+                    <li>CIRUJANA DENTAL</li>
+                    <li>REHABLITACION INTEGRAL</li>
+                    <li>ESTATICA</li>
+                    <li>ORTODONCIA</li>
                 </ul>
-            </div>
-
-        </div>
-        <div class="row text-center">
-            <div class="col-md-4">
-                <h4 class="service-heading" style="text-align: justify">Dr.: Marcos Peralta</h4>
-                <ul style="text-align: justify">
-                    <li>Patologia Bucal</li>
-                    <li>Pr贸tesis Bucal e Implantolog铆a</li>
-                    <li>Pr贸tesis Maxilofacial</li>
             </div>
 
         </div>

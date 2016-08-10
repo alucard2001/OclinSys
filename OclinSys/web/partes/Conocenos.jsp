@@ -1,30 +1,29 @@
 <%-- 
     Document   : Conocenos
-    Created on : 27-jul-2016, 18:43:13
+    Created on : 28-feb-2016, 17:32:59
     Author     : Alucard
 --%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!--Conocenos-->
 <section class="quienessomos">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section heading"></h2>
+                <h2 class="section-heading">Conocenos</h2>
                 <h3 class="section-heading text-left">Quienes Somos</h3>
                 <p class="text-muted" style=" text-align: justify">
-                    Fundada en 2008 por el Dr. Oscar Hasb√∫n, nuestra empresa se encuentra entre las principales 
-                    compa√±√≠as de igualas dentales del pa√≠s. Sonrisa Felix es una empresa con 11 a√±os en el mercado y
-                    m√°s de 100 empresas afiliadas a las cuales le presta servicio directamente o a trav√©s de las diferentes ARS.
+                    Fundada en 2008 por el Dr. Oscar Hasb˙n, nuestra empresa se encuentra entre las principales 
+                    compaÒÌas de igualas dentales del paÌs. Sonrisa Felix es una empresa con 11 aÒos en el mercado y
+                    m·s de 100 empresas afiliadas a las cuales le presta servicio directamente o a travÈs de las diferentes ARS.
 
-                    Nuestra empresa cada d√≠a afianza m√°s su compromiso con la calidad del servicio que ofrece a todos sus afiliados
+                    Nuestra empresa cada dÌa afianza m·s su compromiso con la calidad del servicio que ofrece a todos sus afiliados
                     por lo cual usted puede sentirse confiado en que siempre estaremos dando un paso adelante en la eficiencia y calidad
                     que el paciente se merece.
 
-                    Sonrisa Felix es un moderno sistema de igualas odontol√≥gicas que ha sido dise√±ado bajo la base de medicina preventiva, 
-                    donde el afiliado y sus dependientes podr√°n asistir a sus citas dentales peri√≥dicamente para evitar da√±os futuros en su 
+                    Sonrisa Felix es un moderno sistema de igualas odontolÛgicas que ha sido diseÒado bajo la base de medicina preventiva, 
+                    donde el afiliado y sus dependientes podr·n asistir a sus citas dentales periÛdicamente para evitar daÒos futuros en su 
                     salud oral.</p>
-
+              
+                
             </div>
         </div>
 
@@ -35,28 +34,29 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-left">
-                <h3 class="section-heading" >Mision</h3>
-                <p class="text-muted " style=" text-align: justify">
-                    Brindar servicios odontol√≥gicos integrales contribuyendo a 
+                <h3 class="section-heading" >MISI”N</h3>
+                <p class="text-muted"style=" text-align: justify">
+                    Brindar servicios odontolÛgicos integrales contribuyendo a 
                     resolver eficazmente los problemas de salud Oral de nuestros pacientes, 
                     aplicando para ello conceptos de excelencia en el servicio, eficiencia en la 
-                    gesti√≥n y calidez personalizada en la atenci√≥n. </p>
+                    gestiÛn y calidez personalizada en la atenciÛn. </p>
             </div>
         </div>
     </div>
 </section>
+
 <!--Vision-->
 <section class="vision">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-left">
-                <h3 class="section-heading" >Vision</h3>
-                <p class="text-muted" style=" text-align: justify">
-                    Ser la cl√≠nica odontol√≥gica l√≠der en la ciudad de Santiago, con lo m√°s avanzado en
-                    tecnolog√≠a y con especialistas que re√∫nan los requisitos m√°ximos de profesionalismo 
-                    y excelencia, para satisfacer al m√°ximo las exigencias de nuestros pacientes e ir m√°s
-                    all√° de sus expectativas, deseando establecer una relaci√≥n duradera con cada paciente 
-                    basada en el tratamiento personalizado y orientado al detalle brind√°ndoles nuestra 
+                <h3 class="section-heading" >VISI”N</h3>
+                <p class="text-muted"style=" text-align: justify">
+                    Ser la clÌnica odontolÛgica lÌder en la ciudad de Santiago, con lo m·s avanzado en
+                    tecnologÌa y con especialistas que re˙nan los requisitos m·ximos de profesionalismo 
+                    y excelencia, para satisfacer al m·ximo las exigencias de nuestros pacientes e ir m·s
+                    all· de sus expectativas, deseando establecer una relaciÛn duradera con cada paciente 
+                    basada en el tratamiento personalizado y orientado al detalle brind·ndoles nuestra 
                     experiencia a su servicio. </p>
             </div>
         </div>
@@ -72,7 +72,7 @@
                     <li>Serviciales</li>
                     <li>Respetuosos</li>
                     <li>Comprometidos</li>
-                    <li>√çntegros</li>
+                    <li>Õntegros</li>
                     <li>Responsables</li>
                     <li>Unidos</li>
                 </ul>
@@ -80,3 +80,4 @@
         </div>
     </div>
 </section>
+
