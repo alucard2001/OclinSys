@@ -34,7 +34,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-left">
-                <h3 class="section-heading" >MISIÓN</h3>
+                <h3 class="section-heading" >Mision</h3>
                 <p class="text-muted"style=" text-align: justify">
                     Brindar servicios odontológicos integrales contribuyendo a 
                     resolver eficazmente los problemas de salud Oral de nuestros pacientes, 
@@ -50,7 +50,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-left">
-                <h3 class="section-heading" >VISIÓN</h3>
+                <h3 class="section-heading" >Vision</h3>
                 <p class="text-muted"style=" text-align: justify">
                     Ser la clínica odontológica líder en la ciudad de Santiago, con lo más avanzado en
                     tecnología y con especialistas que reúnan los requisitos máximos de profesionalismo 

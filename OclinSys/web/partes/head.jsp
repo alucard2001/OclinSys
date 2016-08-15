@@ -14,6 +14,6 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
    
     <!-- Stylesheets -->
-   <link rel="stylesheet" href="css/estilo.css">
+   <!-- <link rel="stylesheet" href="css/style.css"> -->
 
 </head>
