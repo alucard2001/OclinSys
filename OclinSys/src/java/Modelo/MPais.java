@@ -11,7 +11,7 @@ public interface MPais {
     
     public List<Pais> list();
 
-    public Pais edit(int idpais);
+    public Pais search(String Pais);
 
     public boolean save(Pais pais);
 

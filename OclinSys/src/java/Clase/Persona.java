@@ -49,10 +49,4 @@ public class Persona extends Tercero{
         this.idtipopermiso = idtipopermiso;
     }
 
-   
-  
-
-  
-    
-    
 }

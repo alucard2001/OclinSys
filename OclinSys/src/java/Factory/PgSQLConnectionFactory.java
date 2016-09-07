@@ -7,9 +7,9 @@ import java.sql.DriverManager;
 
 public final class PgSQLConnectionFactory extends ConnectionDb {
 
-   String url = "jdbc:postgresql://localhost:5432/OclinSys";
+   String url = "jdbc:postgresql://localhost:5432/onclinsys";
     String user = "postgres";
-    String pass = "infotep";
+    String pass = "Tatiana17";
     public PgSQLConnectionFactory(String[] params) {
         this.params = params;
         this.open();

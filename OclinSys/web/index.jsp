@@ -10,7 +10,7 @@
     <%@include file="partes/head.jsp" %>
     
     <body> 
-         <%@include file="partes/Menu.jsp" %>
+            <%@include file="partes/Menu.jsp" %>
         <%@include file="partes/jumbotron.jsp" %>
         <%@include file="partes/bienbenido.jsp" %>
         <%@include file="partes/Servicios.jsp" %>
@@ -22,5 +22,5 @@
 
         <%@include file="partes/fin.jsp" %>
 
-    </body>
+
 </html>

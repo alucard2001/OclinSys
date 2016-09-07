@@ -30,18 +30,6 @@
         </div>
         <div class="row text-center">
             <div class="col-md-4">
-                <h4 class="service-heading"style="text-align: justify">DR.: RODOLFO MENDOZA :</h4>
-                <ul style="text-align: justify">
-                    <li>CIRUJANA MAXILOFACIAL</li>
-                    <li>REHABLITACION INTEGRAL</li>
-                    <li>ESTATICA</li>
-                    <li>ORTODONCIA</li>
-                </ul>
-            </div>
-
-        </div>
-         <div class="row text-center">
-            <div class="col-md-4">
                 <h4 class="service-heading"style="text-align: justify">DRA.: SUSY BERNAL LUCAR:</h4>
                 <ul style="text-align: justify">
                     <li>CIRUJANA DENTAL</li>

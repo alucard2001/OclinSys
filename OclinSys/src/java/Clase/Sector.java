@@ -12,7 +12,7 @@ package Clase;
 public class Sector {
 
     private int idsector, idmunicipio;
-    private String sector;
+    private String sector,municipio;
 
     public Sector() {
     }
@@ -21,6 +21,14 @@ public class Sector {
         this.idsector = idsector;
         this.idmunicipio = idmunicipio;
         this.sector = sector;
+    }
+
+    public String getMunicipio() {
+        return municipio;
+    }
+
+    public void setMunicipio(String municipio) {
+        this.municipio = municipio;
     }
 
     public int getIdsector() {

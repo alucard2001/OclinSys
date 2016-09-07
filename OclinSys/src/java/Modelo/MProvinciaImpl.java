@@ -5,7 +5,7 @@
  */
 package Modelo;
 
-import Clase.Pais;
+import Clase.Provincia;
 import Factory.ConnectionDb;
 import Factory.FactoryConnectionDb;
 import java.sql.ResultSet;
@@ -16,23 +16,26 @@ import java.util.List;
  *
  * @author Alucard
  */
-public class MPaisImpl implements MPais {
+public class MProvinciaImpl implements MProvincia {
 
     ConnectionDb conn;
 
     @Override
-    public List<Pais> list() {
+    public List<Provincia> list() {
+
         this.conn = FactoryConnectionDb.open(FactoryConnectionDb.PGSQL);
         StringBuilder sql = new StringBuilder();
-        sql.append("SELECT * FROM  direccion.pais");
-        List<Pais> list = new ArrayList<Pais>();
+        sql.append("SELECT * FROM  direccion.provincia");
+        List<Provincia> list = new ArrayList<Provincia>();
         try {
             ResultSet rs = this.conn.query(sql.toString());
             while (rs.next()) {
-                Pais pais = new Pais();
-                pais.setIdpais(rs.getInt("idpais"));
-                pais.setPais(rs.getString("pais"));
-                list.add(pais);
+                Provincia provincia = new Provincia();
+                provincia.setIdprovincia(rs.getInt("idprovincia"));
+                provincia.setProvincia(rs.getString("provincia"));
+                provincia.setIdregion(rs.getInt("idregion_region"));
+
+                list.add(provincia);
             }
 
         } catch (Exception e) {
@@ -43,18 +46,21 @@ public class MPaisImpl implements MPais {
     }
 
     @Override
-    public boolean save(Pais pais) {
+    public boolean save(Provincia provincia) {
         this.conn = FactoryConnectionDb.open(FactoryConnectionDb.PGSQL);
         boolean save = false;
         try {
-            if (pais.getIdpais() == 0) {//nuevo
+            if (provincia.getIdprovincia() == 0) {//nuevo
                 StringBuilder sql = new StringBuilder();
-                sql.append("INSERT INTO  direccion.pais (pais) VALUES('").append(pais.getPais()).append("')");
+                sql.append("INSERT INTO  direccion.provincia (provincia,idregion_region) VALUES('").append(provincia.getProvincia());
+                sql.append("', ").append(provincia.getIdregion()).append(")");
                 this.conn.execute(sql.toString());
 
             } else {//actualizar
                 StringBuilder sql = new StringBuilder();
-                sql.append("UPDATE direccion.pais set pais ='").append(pais.getPais()).append("' WHERE idpais = ").append(pais.getIdpais());
+                sql.append("UPDATE direccion.provincia set provincia = ").append(provincia.getProvincia());
+                sql.append(", idregion_region= '").append(provincia.getIdregion());
+                sql.append("',WHERE idregion = ").append(provincia.getIdprovincia());
                 this.conn.execute(sql.toString());
             }
             save = true;
@@ -63,16 +69,17 @@ public class MPaisImpl implements MPais {
             this.conn.close();
         }
         return save;
+
     }
 
     @Override
-    public boolean delete(int idpais) {
+    public boolean delete(int idprovincia) {
         this.conn = FactoryConnectionDb.open(FactoryConnectionDb.PGSQL);
         boolean delete = false;
 
         try {
             StringBuilder sql = new StringBuilder();
-            sql.append("DELETE FROM direccion.pais WHERE idpais = ").append(idpais);
+            sql.append("DELETE FROM direccion.provincia WHERE idprovincia = ").append(idprovincia);
             this.conn.execute(sql.toString());
 
         } catch (Exception e) {
@@ -81,25 +88,28 @@ public class MPaisImpl implements MPais {
 
         }
         return delete;
+
     }
 
     @Override
-    public Pais search(String P) {
+    public Provincia search(String provincia) {
         this.conn = FactoryConnectionDb.open(FactoryConnectionDb.PGSQL);
-        Pais pais = new Pais();
+        Provincia r = new Provincia();
         StringBuilder sql = new StringBuilder();
-        sql.append("SELECT direccion.pais.pais FROM direccion.pais where direccion.pais.pais like '").append(P).append("%';");
+        sql.append("SELECT r.region,p.pais from direccion.pais as p,direccion.region as r WHERE r.idpais_pais= p.idpais and r.region like '").append(provincia).append("%';");
         try {
             ResultSet rs = this.conn.query(sql.toString());
             while (rs.next()) {
 
-                pais.setPais(rs.getString("pais"));
+                r.setPais(rs.getString("pais"));
+                r.setProvincia(rs.getString("provincia"));
             }
         } catch (Exception e) {
         } finally {
             this.conn.close();
         }
-        return pais;
+        return r;
     }
-
 }
+
+

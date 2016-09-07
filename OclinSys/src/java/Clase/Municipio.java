@@ -6,7 +6,7 @@ package Clase;
  */
 public class Municipio {
     private int idprovincia, idmunicipio;
-    private String municipio;
+    private String municipio,provincia;
 
     public Municipio() {
     }
@@ -15,6 +15,14 @@ public class Municipio {
         this.idprovincia = idprovincia;
         this.idmunicipio = idmunicipio;
         this.municipio = municipio;
+    }
+
+    public String getProvincia() {
+        return provincia;
+    }
+
+    public void setProvincia(String provincia) {
+        this.provincia = provincia;
     }
 
     public int getIdprovincia() {

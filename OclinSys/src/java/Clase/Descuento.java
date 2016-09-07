@@ -12,16 +12,13 @@ package Clase;
 public class Descuento {
     
     private int iddescuento;
-    private int montodescuento;
-    private String fechadescuento;
+   private float descuento;
 
     public Descuento() {
     }
 
-    public Descuento(int iddescuento, int montodescuento, String fechadescuento) {
+    public Descuento(int iddescuento) {
         this.iddescuento = iddescuento;
-        this.montodescuento = montodescuento;
-        this.fechadescuento = fechadescuento;
     }
 
     public int getIddescuento() {
@@ -32,21 +29,15 @@ public class Descuento {
         this.iddescuento = iddescuento;
     }
 
-    public int getMontodescuento() {
-        return montodescuento;
+    public float getDescuento() {
+        return descuento;
     }
 
-    public void setMontodescuento(int montodescuento) {
-        this.montodescuento = montodescuento;
+    public void setDescuento(float descuento) {
+        this.descuento = descuento;
     }
 
-    public String getFechadescuento() {
-        return fechadescuento;
-    }
-
-    public void setFechadescuento(String fechadescuento) {
-        this.fechadescuento = fechadescuento;
-    }
+   
     
     
 }

@@ -5,7 +5,7 @@
  */
 package Modelo;
 
-import Clase.Pais;
+import Clase.Municipio;
 import Factory.ConnectionDb;
 import Factory.FactoryConnectionDb;
 import java.sql.ResultSet;
@@ -16,23 +16,26 @@ import java.util.List;
  *
  * @author Alucard
  */
-public class MPaisImpl implements MPais {
+public class MMunicipioImpl implements MMunicipio {
 
     ConnectionDb conn;
 
     @Override
-    public List<Pais> list() {
+    public List<Municipio> list() {
+
         this.conn = FactoryConnectionDb.open(FactoryConnectionDb.PGSQL);
         StringBuilder sql = new StringBuilder();
-        sql.append("SELECT * FROM  direccion.pais");
-        List<Pais> list = new ArrayList<Pais>();
+        sql.append("SELECT * FROM  direccion.municipio");
+        List<Municipio> list = new ArrayList<Municipio>();
         try {
             ResultSet rs = this.conn.query(sql.toString());
             while (rs.next()) {
-                Pais pais = new Pais();
-                pais.setIdpais(rs.getInt("idpais"));
-                pais.setPais(rs.getString("pais"));
-                list.add(pais);
+                Municipio municipio = new Municipio();
+                municipio.setIdmunicipio(rs.getInt("idmunicipio"));
+                municipio.setMunicipio(rs.getString("municipio"));
+                municipio.setIdprovincia(rs.getInt("idprovincia_provincia"));
+
+                list.add(municipio);
             }
 
         } catch (Exception e) {
@@ -42,19 +45,23 @@ public class MPaisImpl implements MPais {
         return list;
     }
 
+
     @Override
-    public boolean save(Pais pais) {
+    public boolean save(Municipio municipio) {
         this.conn = FactoryConnectionDb.open(FactoryConnectionDb.PGSQL);
         boolean save = false;
         try {
-            if (pais.getIdpais() == 0) {//nuevo
+            if (municipio.getIdmunicipio()== 0) {//nuevo
                 StringBuilder sql = new StringBuilder();
-                sql.append("INSERT INTO  direccion.pais (pais) VALUES('").append(pais.getPais()).append("')");
+                sql.append("INSERT INTO  direccion.municipio (municipio,idprovincia_provincia) VALUES('").append(municipio.getMunicipio());
+                sql.append("', ").append(municipio.getIdprovincia()).append(")");
                 this.conn.execute(sql.toString());
 
             } else {//actualizar
                 StringBuilder sql = new StringBuilder();
-                sql.append("UPDATE direccion.pais set pais ='").append(pais.getPais()).append("' WHERE idpais = ").append(pais.getIdpais());
+                sql.append("UPDATE direccion.municipio set municipio = ").append(municipio.getMunicipio());
+                sql.append(", idprovincia_provincia= '").append(municipio.getIdprovincia());
+                sql.append("',WHERE idmunicipio = ").append(municipio.getIdmunicipio());
                 this.conn.execute(sql.toString());
             }
             save = true;
@@ -66,13 +73,13 @@ public class MPaisImpl implements MPais {
     }
 
     @Override
-    public boolean delete(int idpais) {
+    public boolean delete(int idmunicipio) {
         this.conn = FactoryConnectionDb.open(FactoryConnectionDb.PGSQL);
         boolean delete = false;
 
         try {
             StringBuilder sql = new StringBuilder();
-            sql.append("DELETE FROM direccion.pais WHERE idpais = ").append(idpais);
+            sql.append("DELETE FROM direccion.municipio WHERE idmunicipio = ").append(idmunicipio);
             this.conn.execute(sql.toString());
 
         } catch (Exception e) {
@@ -84,22 +91,24 @@ public class MPaisImpl implements MPais {
     }
 
     @Override
-    public Pais search(String P) {
+    public Municipio search(String municipio) {
         this.conn = FactoryConnectionDb.open(FactoryConnectionDb.PGSQL);
-        Pais pais = new Pais();
+        Municipio r = new Municipio();
         StringBuilder sql = new StringBuilder();
-        sql.append("SELECT direccion.pais.pais FROM direccion.pais where direccion.pais.pais like '").append(P).append("%';");
+        sql.append("SELECT m.municipio,p.provincia from direccion.provincia as p,direccion.municipio as m WHERE p.idprovincia= m.idprovincia_provincia and m.municipio like \n" +
+" '").append(municipio).append("%';");
         try {
             ResultSet rs = this.conn.query(sql.toString());
             while (rs.next()) {
 
-                pais.setPais(rs.getString("pais"));
+                r.setMunicipio(rs.getString("municipio"));
+                r.setProvincia(rs.getString("provincia"));
             }
         } catch (Exception e) {
         } finally {
             this.conn.close();
         }
-        return pais;
-    }
+        return r;
+    }    
 
 }

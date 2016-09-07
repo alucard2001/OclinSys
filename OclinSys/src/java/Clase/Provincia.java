@@ -12,7 +12,7 @@ package Clase;
 public class Provincia {
 
     private int idprovincia, idregion;
-    private String provincia;
+    private String provincia,pais;
 
     public Provincia() {
     }
@@ -22,6 +22,15 @@ public class Provincia {
         this.idregion = idregion;
         this.provincia = provincia;
     }
+
+    public String getPais() {
+        return pais;
+    }
+
+    public void setPais(String pais) {
+        this.pais = pais;
+    }
+    
 
     public int getIdprovincia() {
         return idprovincia;

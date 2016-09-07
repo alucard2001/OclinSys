@@ -7,7 +7,7 @@ package Clase;
 public class Region {
 
     private int idregion, idpais;
-    private String region;
+    private String region,pais;
 
     public Region() {
     }
@@ -16,6 +16,14 @@ public class Region {
         this.idregion = idregion;
         this.idpais = idpais;
         this.region = region;
+    }
+
+    public String getPais() {
+        return pais;
+    }
+
+    public void setPais(String pais) {
+        this.pais = pais;
     }
 
     public int getIdregion() {

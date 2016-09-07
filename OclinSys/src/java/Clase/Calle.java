@@ -6,17 +6,27 @@ package Clase;
  */
 public class Calle {
 
-    private int idcalle;
+    private int idcalle,Idsector;
     private String calle;
 
     public Calle() {
     }
 
-    public Calle(int idcalle, String calle) {
+    public Calle(int idcalle, int Idsector, String calle) {
         this.idcalle = idcalle;
+        this.Idsector = Idsector;
         this.calle = calle;
     }
 
+    public int getIdsector() {
+        return Idsector;
+    }
+
+    public void setIdsector(int Idsector) {
+        this.Idsector = Idsector;
+    }
+
+    
     public int getIdcalle() {
         return idcalle;
     }
